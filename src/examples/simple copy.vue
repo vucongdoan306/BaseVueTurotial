@@ -1,9 +1,4 @@
 <template>
-    <h1>Bài 1: Binding 2 chiều</h1>
-    <h2>Kiến thức thêm:</h2>
-    <h3>- emits</h3>
-    <h3>- import</h3>
-    <h3>- scss</h3>
   <div style="width: 600px;">
     <!-- Size bé -->
     <VInput v-model="textTest" :destiny="destinyBinding" label="Size bé" @bind-destiny="(value)=> destinyBinding = value"/>

@@ -8,13 +8,14 @@
         :value="modelValue"
         @input="updateInput"
         :id="id"
+        @click="bindingDestiny"
       />
     </div>
   </div>
 </template>
 <script>
 export default {
-  emits: ["update:modelValue"],
+  emits: ["update:modelValue", "bind-destiny"],
   created() {
     this.buildStyleComponent();
     this.buildClassComponent();
@@ -51,6 +52,13 @@ export default {
       inputValue: null,
     };
   },
+
+  watch: {
+    destiny() {
+      this.buildClassComponent();
+    },
+  },
+
   methods: {
     //#region Giao diện
     /**
@@ -64,6 +72,10 @@ export default {
       if (this.width) {
         this.styleWrapper.push({ width: this.width + "px" });
       }
+    },
+
+    bindingDestiny() {
+      this.$emit("bind-destiny", "large");
     },
 
     /**
@@ -93,8 +105,7 @@ export default {
           (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
         ).toString(16)
       );
-    },
-
+    }
     // #endregion
   },
 };
