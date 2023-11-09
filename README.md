@@ -10,7 +10,6 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - Các bước để chạy code sau khi kéo code từ git về
 -- 1: Chạy lên `npm i` - Lệnh này để node tìm các package (thư viên) đã được config trong file package.json và install chúng vào thư mục node_modules 
 (Lưu ý: khi đẩy code lên git folder node_modules sẽ không được đẩy cùng)
-
 -- 2: Sau khi lệnh `npm i` thực hiện xong tiếp tục gõ lệnh `npm run dev` 
 -- 3: Sau khi lệnh chạy xong ctrl + click vào link hiện ra
 
