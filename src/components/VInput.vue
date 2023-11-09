@@ -20,7 +20,7 @@ export default {
     this.buildClassComponent();
   },
   mounted() {
-    this.id = Math.random();
+    this.id = this.uuidv4();
   },
   props: {
     label: {
